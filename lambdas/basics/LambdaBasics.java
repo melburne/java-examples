@@ -1,5 +1,3 @@
-package com.example.lambdas;
-
 import java.util.Comparator;
 
 /**

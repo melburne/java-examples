@@ -1,5 +1,3 @@
-package com.example.lambdas;
-
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 

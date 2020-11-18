@@ -1,5 +1,3 @@
-package com.example.lambdas;
-
 /**
  * Simple interface with a single abstract method.
  */

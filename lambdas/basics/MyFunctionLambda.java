@@ -1,5 +1,3 @@
-package com.example.lambdas;
-
 /**
  * Simple demo of a lambda using an interface.
  */
