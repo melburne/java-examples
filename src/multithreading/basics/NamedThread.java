@@ -1,4 +1,4 @@
-package com.example.multithreading.basics;
+package multithreading.basics;
 
 /**
  * Demonstrates named {@link Thread}s.

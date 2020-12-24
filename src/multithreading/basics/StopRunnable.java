@@ -1,4 +1,4 @@
-package com.example.multithreading.basics;
+package multithreading.basics;
 
 /**
  * Creates a {@link Runnable} that keeps running till the main method requests it to stop.

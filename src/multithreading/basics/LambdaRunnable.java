@@ -1,4 +1,4 @@
-package com.example.multithreading.basics;
+package multithreading.basics;
 
 /**
  * Creates a new {@link Thread} using a lambda {@link Runnable}.

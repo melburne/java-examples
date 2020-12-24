@@ -1,3 +1,5 @@
+package lambdas;
+
 /**
  * Local variables used in a lambda must be effectively final or explicitly marked as final. Static
  * or member variables need not be final.

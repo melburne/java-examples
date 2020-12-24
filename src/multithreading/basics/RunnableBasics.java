@@ -1,4 +1,4 @@
-package com.example.multithreading.basics;
+package multithreading.basics;
 
 /**
  * Creates a new custom {@link Runnable} by implementing the interface.
