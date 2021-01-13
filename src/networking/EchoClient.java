@@ -6,6 +6,9 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
 
+/**
+ * Sends a message to the {@link EchoServer} and reads back the echo message.
+ */
 public class EchoClient {
   private Socket clientSocket;
   private PrintWriter output;
@@ -36,6 +39,7 @@ public class EchoClient {
     BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
     String message = input.readLine();
     String echoMessage;
+    
     while (true) {
       echoMessage = echoClient.sendMessage(message);
       System.out.println("Server echoed: " + echoMessage);
