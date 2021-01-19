@@ -32,7 +32,7 @@ public class ChatServer {
     ChatServer server = new ChatServer();
     BufferedReader userInput = new BufferedReader(new InputStreamReader(System.in));
     String clientMessage;
-    String outputMessage;
+    String inputMessage;
 
     server.start(9090);
 
@@ -45,9 +45,9 @@ public class ChatServer {
         server.closeConnection();
         break;
       } else {
-        // read the message typed by the user and send to the client
-        outputMessage = userInput.readLine();
-        writer.println(outputMessage);
+        // read the message typed by the user and send it to the client
+        inputMessage = userInput.readLine();
+        writer.println(inputMessage);
       }
     }
   }
