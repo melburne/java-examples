@@ -11,4 +11,6 @@ Bite sized code snippets for understanding different concepts in Java
   - [Executor Service](https://github.com/melburne/java-examples/tree/main/src/multithreading/executorservice)
   - [Fork Join](https://github.com/melburne/java-examples/tree/main/src/multithreading/forkjoin)  
 - [Networking](https://github.com/melburne/java-examples/tree/main/src/networking)
+  - [TCP](https://github.com/melburne/java-examples/tree/main/src/networking/tcp)
+  - [UDP](https://github.com/melburne/java-examples/tree/main/src/networking/udp)
 - [Streams API](https://github.com/melburne/java-examples/tree/main/src/streamsapi)
