@@ -8,35 +8,40 @@ import java.net.DatagramSocket;
 import java.net.InetAddress;
 import java.nio.charset.StandardCharsets;
 
+/**
+ * Sends a {@link DatagramPacket} to {@link EchoServer} and waits for it to echo the same {@link
+ * DatagramPacket} back. Communication is terminated when a 'bye' message is typed by the user.
+ */
 public class EchoClient {
-  private static DatagramSocket datagramSocket;
-  private static InetAddress address;
-  private static byte[] buffer = new byte[256];
 
   public static void main(String[] args) throws IOException {
-    datagramSocket = new DatagramSocket();
-    address = InetAddress.getByName("localhost");
-
-    startEcho();
-  }
-
-  private static void startEcho() throws IOException {
+    DatagramSocket datagramSocket = new DatagramSocket();
+    DatagramPacket packet;
     BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
     String inputMessage;
+    byte[] buffer;
+
+    InetAddress address = InetAddress.getLocalHost();
+    int port = 9090;
 
     do {
+      // read the input message
       inputMessage = reader.readLine();
       buffer = inputMessage.getBytes(StandardCharsets.UTF_8);
       String receivedMessage;
 
-      DatagramPacket packet = new DatagramPacket(buffer, buffer.length, address, 9090);
+      // create a datagram packet and send it
+      packet = new DatagramPacket(buffer, buffer.length, address, port);
       datagramSocket.send(packet);
 
+      // wait for a datagram packet of the same size
       packet = new DatagramPacket(buffer, buffer.length);
       datagramSocket.receive(packet);
       receivedMessage = new String(packet.getData());
       System.out.println("Server echoed: " + receivedMessage);
 
     } while (!inputMessage.equals("bye"));
+
+    datagramSocket.close();
   }
 }
