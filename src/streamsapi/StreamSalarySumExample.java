@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /** Uses the Java Streams API to calculate the salaries of a list of employees. */
-public class SalarySum {
+public class StreamSalarySumExample {
 
   private static class Employee {
     String name;
