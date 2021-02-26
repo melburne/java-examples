@@ -54,7 +54,7 @@ public class TestCustomAnnotations {
     for (Field field : clazz.getDeclaredFields()) {
       field.setAccessible(true);
       if (field.isAnnotationPresent(JsonElement.class)) {
-        jsonMap.put(field.getName(), (String) field.get(object));
+        jsonMap.put(getUserDefinedKeyMaybe(field), (String) field.get(object));
       }
     }
 
@@ -64,5 +64,10 @@ public class TestCustomAnnotations {
             .collect(Collectors.joining(", "));
 
     System.out.println("{" + json + "}");
+  }
+  
+  private static String getUserDefinedKeyMaybe(Field field) {
+    String key = field.getAnnotation(JsonElement.class).key();
+    return key.isEmpty() ? field.getName() : key;
   }
 }
