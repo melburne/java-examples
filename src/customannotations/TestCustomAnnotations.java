@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
 public class TestCustomAnnotations {
 
   public static void main(String[] args) throws InvocationTargetException, IllegalAccessException {
-    Person person = new Person("John", "Doe", "23");
+    Person person = new Person("john", "doe", "23");
     convertToJson(person);
   }
 
@@ -54,7 +54,7 @@ public class TestCustomAnnotations {
     for (Field field : clazz.getDeclaredFields()) {
       field.setAccessible(true);
       if (field.isAnnotationPresent(JsonElement.class)) {
-        jsonMap.put(getUserDefinedKeyMaybe(field), (String) field.get(object));
+        jsonMap.put(getUserDefinedKeyMaybe(field), field.get(object).toString());
       }
     }
 
