@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
 public class TestCustomAnnotations {
 
   public static void main(String[] args) throws InvocationTargetException, IllegalAccessException {
-    Person person = new Person("john", "doe", "23");
+    Person person = new Person("john", "doe", "23", "testAddress");
     convertToJson(person);
   }
 

@@ -14,10 +14,11 @@ public class Person {
   
   private String address;
   
-  public Person(String firstName, String lastName, String age) {
+  public Person(String firstName, String lastName, String age, String address) {
     this.firstName = firstName;
     this.lastName = lastName;
     this.age = age;
+    this.address = address;
   }
   
   @Init
