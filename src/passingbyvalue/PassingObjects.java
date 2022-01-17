@@ -1,7 +1,7 @@
 package passingbyvalue;
 
 // https://www.linkedin.com/learning/java-memory-management/how-objects-are-passed
-public class Demo {
+public class PassingObjects {
   public static void main(String[] args) {
     Customer c = new Customer("Sally");
     renameCustomer(c);
